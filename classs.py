@@ -70,22 +70,75 @@
 #         break
 #  
 # #creat the class for product in market
-class Product:
-   def __init__(self,Name='defult',expire="9/9/2023",originprice=0.23,sellpersanteg=123):
-    self.Name= Name
-    self.expire=expire
-    self.__originprice=originprice
-    self.sellpersanteg=sellpersanteg
-    # self.sellprice=originprice*sellprice
-   def __str__(self):
-       return f'name is{self.name} and expire {self.expire} and sellprice{self.sellprice}'
-   def getsellprice(self):
-      sellprice=self.__originprice*self.sellpersanteg
-      return sellprice
-Product1=Product('chips','8/9/2023',0.50,0.25)
-print(Product1.Name)
-print(Product1.getsellprice())
+# class Product:
+#    def __init__(self,Name='defult',expire="9/9/2023",originprice=0.23,sellpersanteg=123):
+#     self.Name= Name
+#     self.expire=expire
+#     self.__originprice=originprice
+#     self.sellpersanteg=sellpersanteg
+#     # self.sellprice=originprice*sellprice
+#    def __str__(self):
+#        return f'name is{self.name} and expire {self.expire} and sellprice{self.sellprice}'
+#    def getsellprice(self):
+#       sellprice=self.__originprice*self.sellpersanteg
+#       return sellprice
+# Product1=Product('chips','8/9/2023',0.50,0.25)
+# print(Product1.Name)
+# print(Product1.getsellprice())
 
-      
-
+# class techaer:
+#     def __init__(self,Name,course):
+#         self.Name=name
+#         self.course=course
+        
+    
+# class student(techaer):
+#     def __init__(self,name,course):
+#         self.Name=name
+#         self.course=course
+            
+#     super().techaer(Name,cou
    
+
+
+# class Animal:
+#     def __init__(self,name,eat):
+#         self.Animalname=name
+#         self.Animaleat=eat
+#     def __str__(self):
+#          return f'name is{self.Animalname} and {self.Animaleat}'
+# class Dog(Animal):
+
+#     def __init__(self, name, eat):
+#         super().__init__(name, eat)
+#         self.name=name
+#         self.eat=eat
+#     def __str__(self):
+#         return f'name is {self.name} and eat is {self.eat}, animal name is{self.Animalname} and animal eat{self.Animaleat}'
+
+# obj1=Dog('Husky','meat')
+# print(obj1.name)
+# print(obj1.eat)
+
+class squer:
+    def __init__(self,x,y):
+        self.x=x
+        self.y=y
+    def area(self):
+        return self.x*self.y
+
+class rectangle(squer):
+    def __init__(self,y,x):
+        self.y=y
+        # self.x=x
+        super().__init__(x,y)
+    
+    # def area(self):
+    #     return super().area()
+    def arearectangle(self):
+        return self.x*self.y
+obj1=squer(10,4)
+print(obj1.area())
+obj2=rectangle(10,5)
+print(obj2.arearectangle())
+
