@@ -120,25 +120,61 @@
 # print(obj1.name)
 # print(obj1.eat)
 
-class squer:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    def area(self):
-        return self.x*self.y
+# class squer:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+#     def area(self):
+#         return self.x*self.y
 
-class rectangle(squer):
-    def __init__(self,y,x):
-        self.y=y
-        # self.x=x
-        super().__init__(x,y)
+# class rectangle(squer):
+#     def __init__(self,y,x):
+#         self.y=y
+#         # self.x=x
+#         super().__init__(x,y)
     
-    # def area(self):
-    #     return super().area()
-    def arearectangle(self):
-        return self.x*self.y
-obj1=squer(10,4)
-print(obj1.area())
-obj2=rectangle(10,5)
-print(obj2.arearectangle())
+#     # def area(self):
+#     #     return super().area()
+#     def arearectangle(self):
+#         return self.x*self.y
+# obj1=squer(10,4)
+# print(obj1.area())
+# obj2=rectangle(10,5)
+# print(obj2.arearectangle())
 
+
+class father:
+    def __init__(self,name,age,haircolor):
+        self.fathername=name
+        self.fatherage=age
+        self.haircolor=haircolor
+    def __str__(self):
+        return f'father is name{self.fathername} and fatherage{self.fatherage}and haircolor{self.haircolor}'
+class mother:
+    def __init__(self,name,age,eyecolor):
+        self.mothername=name
+        self.motherage=age
+        self.eyecolor=eyecolor    
+    def __str__(self):
+        return f'mother name is{self.mothername} and age{self.motherage} and eyecolor{self.eyecolor}'
+class partty:
+    def __init__(self,location):
+        self.location=location
+    def __str__(self):
+        return self.location
+
+class son(father,mother,partty):
+    def __init__(self,name,age,fathername,fatherage,haircolor,mothername,motherage,eyecolor,location):
+        father.__init__(self,fathername,fatherage,haircolor)
+        mother.__init__(self.mothername,motherage,eyecolor)
+        partty.__init__(self,location)
+        self.name=name
+        self.age=age
+    def __str__(self):
+        return f'name is {self.name} and age{self.age}'
+    
+    
+
+
+son1=son('basel',20,'ali',50,'black','nina',40,'blue','jordan')
+print(son1)
