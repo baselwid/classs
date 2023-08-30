@@ -143,6 +143,7 @@
 # print(obj2.arearectangle())
 
 
+<<<<<<< HEAD
 # class Animals:
 #     def __init__(self,name,type):
 #         self.name=name
@@ -191,3 +192,40 @@ inputtext.pack()
 btn=Button(Window, text="click Me" , command=clicked)
 btn.grid(column=1, row=0)
 Window.mainloop()
+=======
+class father:
+    def __init__(self,name,age,haircolor):
+        self.fathername=name
+        self.fatherage=age
+        self.haircolor=haircolor
+    def __str__(self):
+        return f'father is name{self.fathername} and fatherage{self.fatherage}and haircolor{self.haircolor}'
+class mother:
+    def __init__(self,name,age,eyecolor):
+        self.mothername=name
+        self.motherage=age
+        self.eyecolor=eyecolor    
+    def __str__(self):
+        return f'mother name is{self.mothername} and age{self.motherage} and eyecolor{self.eyecolor}'
+class partty:
+    def __init__(self,location):
+        self.location=location
+    def __str__(self):
+        return self.location
+
+class son(father,mother,partty):
+    def __init__(self,name,age,fathername,fatherage,haircolor,mothername,motherage,eyecolor,location):
+        father.__init__(self,fathername,fatherage,haircolor)
+        mother.__init__(self.mothername,motherage,eyecolor)
+        partty.__init__(self,location)
+        self.name=name
+        self.age=age
+    def __str__(self):
+        return f'name is {self.name} and age{self.age}'
+    
+    
+
+
+son1=son('basel',20,'ali',50,'black','nina',40,'blue','jordan')
+print(son1)
+>>>>>>> 0c53136af91a64fd1f1705790895a8e6c1cc6420
