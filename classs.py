@@ -120,25 +120,74 @@
 # print(obj1.name)
 # print(obj1.eat)
 
-class squer:
-    def __init__(self,x,y):
-        self.x=x
-        self.y=y
-    def area(self):
-        return self.x*self.y
+# class squer:
+#     def __init__(self,x,y):
+#         self.x=x
+#         self.y=y
+#     def area(self):
+#         return self.x*self.y
 
-class rectangle(squer):
-    def __init__(self,y,x):
-        self.y=y
-        # self.x=x
-        super().__init__(x,y)
+# class rectangle(squer):
+#     def __init__(self,y,x):
+#         self.y=y
+#         # self.x=x
+#         super().__init__(x,y)
     
-    # def area(self):
-    #     return super().area()
-    def arearectangle(self):
-        return self.x*self.y
-obj1=squer(10,4)
-print(obj1.area())
-obj2=rectangle(10,5)
-print(obj2.arearectangle())
+#     # def area(self):
+#     #     return super().area()
+#     def arearectangle(self):
+#         return self.x*self.y
+# obj1=squer(10,4)
+# print(obj1.area())
+# obj2=rectangle(10,5)
+# print(obj2.arearectangle())
 
+
+# class Animals:
+#     def __init__(self,name,type):
+#         self.name=name
+#         self.type=type
+#     def __str__(self):
+#         return f'name is {self.name} and type is {self.type}'
+#     def __eq__(self,other):
+#         return self.name==other.name and self.type==other.type
+# Animal1=Animals('cat','mamal') 
+# print('animal 1',Animal1)
+# Animal2=Animals('cat','mamal')
+# print('animal 2',Animal2)
+# print('check if equal or not', Animal1==Animal2)
+# print('check obj 1 type',type(Animal1))
+# print('check obj 2 type',type(Animal2))    
+
+# print('check obj 1 memory location ',id(Animal1))       
+# print('check obj 2 memory location ',id(Animal2))    
+
+# from tkinter import *
+# from tkinter import ttk
+# root = Tk()
+# frm = ttk.Frame(root, padding=10)
+# frm.grid()
+# # def name():
+# #     print('hi from tkinter')
+# ttk.Label(frm, text="Hello World!").grid(column=1, row=1)
+# ttk.Button(frm, text="Quit", command=root.destroy).grid(column=1, row=0)
+# root.mainloop()
+
+from tkinter import *
+Window=Tk()
+Window.title('welcome to likeGeeks app')
+Window.geometry('350x200')
+lbl=Label(Window, text='Hello')
+lbl.grid(column=0,row=0)
+count1=0
+def clicked():
+    global count1
+    count1 +=1
+    print(count1)
+    lbl.configure (text=f"count{count1}")
+input = Entry(Window,width=10)
+inputtext= Text(Window,height=5,width=20)
+inputtext.pack()
+btn=Button(Window, text="click Me" , command=clicked)
+btn.grid(column=1, row=0)
+Window.mainloop()
